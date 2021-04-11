@@ -31,14 +31,4 @@ public class GameEvents : MonoBehaviour
             BossDead();
         }
     }
-
-    public event Action TimerEnd;
-
-    public void StopTimer()
-    {
-        if (TimerEnd != null)
-        {
-            TimerEnd();
-        }
-    }
 }

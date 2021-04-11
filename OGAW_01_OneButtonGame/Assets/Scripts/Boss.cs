@@ -29,13 +29,16 @@ public class Boss : MonoBehaviour
     
     private void Update()
     {
-        if (health <= 50)
+        if (health <= 49)
         {
             spriteRenderer.sprite = sadBernd;
         }
+
         if (health <= 0)
         {
-            GameEvents.current.EndFight();
+            health = 0;
         }
+
+        HealthText.text = "Health = " + health;
     }
 }

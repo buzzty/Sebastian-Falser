@@ -11,10 +11,10 @@ public class Button : MonoBehaviour
 
     private void Start()
     {
-        GameEvents.current.BossDead += StopHit;
+        GameEvents.current.TimerEnd += EndGame;
     }
 
-    private void StopHit()
+    private void EndGame()
     {
         canHit = false;
     }
